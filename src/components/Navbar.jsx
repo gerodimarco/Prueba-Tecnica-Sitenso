@@ -3,10 +3,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import './Navbar.css';
 
 function BasicExample() {
   return (
-    <Navbar variant="dark" bg="danger" expand="lg" >
+    <Navbar marvel-font variant="dark" bg="danger" expand="lg" >
       <Container>
         <Navbar.Brand href="#home">MARVEL</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
