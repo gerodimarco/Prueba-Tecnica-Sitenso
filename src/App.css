@@ -5,3 +5,7 @@
 .card-img-top {
   height: 100%;
 }
+
+.Pagination{
+  justify-content: center;
+}
