@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import CharacterCard from "./components/CharacterCard";
 import axios from 'axios';
 import {useState, useEffect} from 'react';
+import './App.css';
 
 
 function App() {
@@ -19,26 +20,45 @@ function App() {
 
 
   return (
-    <><Navbar />
+    <><Navbar>
+      </Navbar>
+    
     <div className="container">
-      <div className="row">
-        {characters && characters.map((character) => (
-          <div key={character.id} className="col-6 mb-4">
-            
-            <div className="card text-white bg-dark">
-              <img
-                src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                alt={character.name}
-                className="card-img-top" />
-              <div className="card-body">
-                <h5 className="card-title">{character.name}</h5>
-                <p className="card-text">{character.description}</p>
+        <div className="row">
+          {characters && characters.map((character) => (
+            <div key={character.id} className="col-6 mb-4">
+              <div className="card text-white bg-dark">
+              
+                <img
+                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                  alt={character.name}
+                  className="card-img-top" />
+                <div className="card-body">
+                  <h5 className="card-title">{character.name}</h5>
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver mas</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+                  <div class="modal-body">
+                  <p className="card-text">{character.description}</p>
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+    </div>
+  </div>
+                  </div>
+                  
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div></>
+          ))}
+        </div>
+      </div></>
 
   );
 }

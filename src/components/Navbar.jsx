@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import './Navbar.css';
 
+
 function BasicExample() {
   return (
     <Navbar marvel-font variant="dark" bg="danger" expand="lg" >
@@ -14,12 +15,13 @@ function BasicExample() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto text-white">
             <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#link">Personajes</Nav.Link>
-            <NavDropdown title="Comics" id="basic-nav-dropdown">
+            <Nav.Link href="/">Personajes</Nav.Link>
+            <Nav.Link href="/">Comics</Nav.Link>
+            {/* <NavDropdown title="Comics" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Spiderman</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Dr.Strange</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Iron Man</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
